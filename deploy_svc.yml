@@ -6,11 +6,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: python-webapp
+      app: sak
   template:
     metadata:
       labels:
-        app: python-webapp
+        app: sak
     spec:
       containers:
       - name: python-webapp
@@ -24,9 +24,10 @@ metadata:
   name: python-webapp-service
 spec:
   selector:
-    app: python-webapp
+    app: sak
   ports:
   - protocol: TCP
     port: 80
     targetPort: 5000
+    nodePort: 30090
   type: NodePort  
