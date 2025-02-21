@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
       - name: python-webapp
-        image: python-webapp:latest  
+        image: sakit333/python_flask_webapp:latest  
         ports:
         - containerPort: 5000
+        
 ---
 apiVersion: v1
 kind: Service
