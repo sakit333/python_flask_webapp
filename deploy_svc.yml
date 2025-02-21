@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: python-webapp
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: sak
@@ -17,7 +17,7 @@ spec:
         image: sakit333/python_flask_webapp:latest  
         ports:
         - containerPort: 5000
-        
+
 ---
 apiVersion: v1
 kind: Service
